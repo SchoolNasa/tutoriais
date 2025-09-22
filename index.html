@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #0a2540, #1b4f72, #21618c);
+      background-attachment: fixed;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: rgba(0, 30, 60, 0.6);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px rgba(0,0,50,0.6);
+    }
+
+    h1, h2, h3, p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #66ccff;
+      text-shadow: 0 0 10px rgba(0,150,255,0.8);
+    }
+
+    h3 {
+      font-weight: 400;
+      color: #a0cce0;
+    }
+
+    .game-buttons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* always 3 columns */
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .game-buttons button {
+      background: rgba(0, 80, 150, 0.2);
+      border: 2px solid rgba(0,150,255,0.4);
+      border-radius: 15px;
+      padding: 20px;
+      color: #e0f7ff;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,50,0.4);
+    }
+
+    .game-buttons button:hover {
+      transform: translateY(-6px);
+      background: rgba(0,120,255,0.3);
+      border-color: #66ccff;
+      box-shadow: 0 8px 25px rgba(0,0,80,0.6);
+    }
+
+    .game-buttons button img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border: 2px solid rgba(100,180,255,0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #a0cce0;
+      background: rgba(0,0,40,0.7);
+      backdrop-filter: blur(6px);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jogos</h1>
+    <p>Alguns jogos podem demorar para carregar.</p>
+
+    <div class="game-buttons">
+      <button onclick="openGame('https://schoolnasa.github.io/subsurf')"> <img src="img/21.webp">Subway Surfers</button>
+      <button onclick="openGame('Minecraft.html')"> <img src="img/minecraft.jpg">Minecraft (1.12.2)</button>
+    </div>
+  </div>
+
+  <script>
+    function openGame(url){
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
